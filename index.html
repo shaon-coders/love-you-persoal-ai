@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Israt Jahan I Love You 💕 — ভালোবাসার স্মৃতির বই</title>
-  <meta name="description" content="Israt Jahan-এর জন্য একটি ভালোবাসার স্মৃতির বই, যেখানে ১১টি মায়াময় অধ্যায়ের পাতা একে একে উল্টে যায়।">
+  <title>Sumi I Love You 💕 — A Love Keepsake Book</title>
+  <meta name="description"
+    content="A handcrafted love keepsake book for Sumi, with 11 heartfelt chapters that unfold one by one.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Ambient canvases & lighting -->
   <canvas id="ambient-canvas" aria-hidden="true"></canvas>
-  <canvas id="cursor-canvas"  aria-hidden="true"></canvas>
+  <canvas id="cursor-canvas" aria-hidden="true"></canvas>
   <canvas id="confetti-canvas" aria-hidden="true"></canvas>
   <div class="candlelight-overlay" aria-hidden="true"></div>
 
   <!-- Top Controls -->
-  <header class="top-controls" role="toolbar" aria-label="বইয়ের নিয়ন্ত্রণ">
-    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="ctrl-btn ctrl-btn--icon-only" aria-label="ইনস্টাগ্রামে @the.cipher.stack" title="ইনস্টাগ্রামে @the.cipher.stack">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+  <header class="top-controls" role="toolbar" aria-label="Book Controls">
+    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="ctrl-btn ctrl-btn--icon-only"
+      aria-label="Instagram @the.cipher.stack" title="Instagram @the.cipher.stack">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
       </svg>
     </a>
-    <button id="btn-customizer" class="ctrl-btn" aria-label="কারণগুলো সাজান" title="কারণ সম্পাদনা করুন">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-      <span class="ctrl-label">সাজান</span>
+    <button id="btn-customizer" class="ctrl-btn" aria-label="Customize Reasons" title="Edit Reasons">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 20h9" />
+        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+      </svg>
+      <span class="ctrl-label">Edit</span>
     </button>
-    <button id="btn-sound" class="ctrl-btn" aria-label="সুর চালু বা বন্ধ করুন" aria-pressed="false" title="সুর (M)">
-      <svg id="icon-muted" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27l4.73 4.73H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
-      <svg id="icon-sound" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" class="hide" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
-      <span class="ctrl-label" id="sound-label">সুর: বন্ধ</span>
+    <button id="btn-sound" class="ctrl-btn" aria-label="Toggle Music" aria-pressed="false" title="Music (M)">
+      <svg id="icon-muted" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path
+          d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27l4.73 4.73H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+      </svg>
+      <svg id="icon-sound" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" class="hide"
+        aria-hidden="true">
+        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+      </svg>
+      <span class="ctrl-label" id="sound-label">Music: Off</span>
     </button>
   </header>
 
@@ -44,18 +61,19 @@
     <header class="app-header">
       <span class="sparkle-l" aria-hidden="true">✦</span>
       <div class="title-group">
-        <p class="proposal-line">Proposed by Mehat</p>
-        <h1 class="main-title">Israt Jahan I Love You</h1>
-        <p class="main-subtitle">ভালোবাসা ও স্মৃতিতে হাতে গড়া একটি উপহার</p>
+        <p class="proposal-line">Proposed by Shaon</p>
+        <h1 class="main-title">Sumi I Love You</h1>
+        <p class="main-subtitle">A handcrafted gift woven with love &amp; memories</p>
       </div>
       <span class="sparkle-r" aria-hidden="true">✦</span>
     </header>
 
     <!-- ═══════════════════ BOOK SCENE ═══════════════════ -->
-    <section class="book-scene" id="book-scene" aria-label="ভালোবাসার 3D স্মৃতির বই">
+    <section class="book-scene" id="book-scene" aria-label="A 3D Love Keepsake Book">
 
       <!-- ─── CLOSED BOOK (3D Box) ─── -->
-      <div class="closed-book" id="closed-book" role="button" tabindex="0" aria-label="বন্ধ 3D স্মৃতির বই। খুলতে ক্লিক করুন অথবা Enter চাপুন।">
+      <div class="closed-book" id="closed-book" role="button" tabindex="0"
+        aria-label="Closed 3D Keepsake Book. Click or press Enter to open.">
         <!-- Front Cover -->
         <div class="cb-face cb-face--front">
           <div class="cb-corner cb-tl" aria-hidden="true"></div>
@@ -64,32 +82,32 @@
           <div class="cb-corner cb-br" aria-hidden="true"></div>
           <div class="cb-inner">
             <p class="cb-sparkles" aria-hidden="true">✦ ✦ ✦</p>
-            <h2 class="cb-title">Israt Jahan<br>I Love You</h2>
+            <h2 class="cb-title">Sumi<br>I Love You</h2>
             <span class="cb-heart" aria-hidden="true">❤️</span>
-            <p class="cb-tagline">আমাদের গল্প</p>
+            <p class="cb-tagline">Our Story</p>
             <div class="cb-rule" aria-hidden="true"></div>
-            <p class="cb-count" id="cb-count">১১টি অধ্যায়</p>
+          <p class="cb-count" id="cb-count">11 Chapters</p>
           </div>
         </div>
         <!-- 3D Faces -->
         <div class="cb-face cb-face--spine" aria-hidden="true"></div>
         <div class="cb-face cb-face--pages" aria-hidden="true"></div>
-        <div class="cb-face cb-face--top"   aria-hidden="true"></div>
-        <div class="cb-face cb-face--bot"   aria-hidden="true"></div>
+        <div class="cb-face cb-face--top" aria-hidden="true"></div>
+        <div class="cb-face cb-face--bot" aria-hidden="true"></div>
         <div class="cb-face cb-face--back-cover" aria-hidden="true"></div>
       </div>
 
       <!-- Single Open CTA Button -->
       <div class="open-cta" id="open-cta">
-        <button class="open-book-btn" id="btn-open-book" aria-label="বই খুলুন">
+        <button class="open-book-btn" id="btn-open-book" aria-label="Open the Book">
           <span class="btn-glow" aria-hidden="true"></span>
           <span aria-hidden="true">📖</span>
-          <span>বই খুলুন</span>
+          <span>Open the Book</span>
         </button>
       </div>
 
       <!-- ─── OPEN BOOK SPREAD ─── -->
-      <div class="open-book" id="open-book" aria-label="খোলা বইয়ের পাতা">
+      <div class="open-book" id="open-book" aria-label="Open Book Pages">
 
         <!-- Hardcover leather frame -->
         <div class="book-frame" aria-hidden="true">
@@ -104,24 +122,26 @@
         <div class="book-spread">
 
           <!-- LEFT PAGE (Polaroid & Memory) -->
-          <div class="spread-page spread-page--left" id="spread-left" aria-label="স্মৃতির পাতা">
+          <div class="spread-page spread-page--left" id="spread-left" aria-label="Memory Page">
             <div class="page-texture" aria-hidden="true"></div>
             <div class="page-border" aria-hidden="true"></div>
-            <div class="silk-ribbon" aria-hidden="true"><div class="ribbon-tail"></div></div>
+            <div class="silk-ribbon" aria-hidden="true">
+              <div class="ribbon-tail"></div>
+            </div>
             <div class="left-inner">
               <div class="polaroid-frame" id="polaroid-frame">
                 <div class="polaroid-img">
                   <div class="polaroid-scene" id="polaroid-scene">
                     <div class="scene-stars" aria-hidden="true"></div>
-                    <div class="scene-moon"  aria-hidden="true"></div>
+                    <div class="scene-moon" aria-hidden="true"></div>
                     <div class="scene-hills" aria-hidden="true"></div>
                   </div>
                 </div>
-                <p class="polaroid-caption" id="polaroid-caption">A quiet moment</p>
+                <p class="polaroid-caption" id="polaroid-caption">A Quiet Moment</p>
               </div>
               <div class="left-quote">
-                <p class="handwritten-note" id="handwritten-note">"এই পৃথিবীতে তোমার মতো আপন হৃদয় আর কারও নেই।"</p>
-                <span class="chapter-label" id="chapter-label">অধ্যায় ১ ✦ নির্মল আলো</span>
+              <p class="handwritten-note" id="handwritten-note">"In this whole world, there is no heart as dear to me as yours."</p>
+              <span class="chapter-label" id="chapter-label">Chapter 1 ❖ A New Light</span>
               </div>
             </div>
           </div>
@@ -143,39 +163,40 @@
     </section><!-- .book-scene -->
 
     <!-- Progress Bar -->
-    <section class="progress-section" id="progress-section" aria-label="পড়ার অগ্রগতি">
-      <div class="progress-track" id="progress-track" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="11">
+    <section class="progress-section" id="progress-section" aria-label="Reading Progress">
+      <div class="progress-track" id="progress-track" role="progressbar" aria-valuenow="1" aria-valuemin="1"
+        aria-valuemax="11">
         <div class="progress-fill" id="progress-fill"></div>
       </div>
       <span class="progress-label">
-        পৃষ্ঠা <strong id="page-current">১</strong> / <strong id="page-total">১১</strong>
+        Page <strong id="page-current">1</strong> / <strong id="page-total">11</strong>
       </span>
     </section>
 
     <!-- Navigation Controls -->
-    <nav class="nav-controls" id="nav-controls" aria-label="বইয়ের নেভিগেশন">
-      <button class="nav-btn nav-btn--prev" id="btn-prev" aria-label="আগের পৃষ্ঠা" disabled>
+    <nav class="nav-controls" id="nav-controls" aria-label="Book Navigation">
+      <button class="nav-btn nav-btn--prev" id="btn-prev" aria-label="Previous Page" disabled>
         <span class="nav-arrow" aria-hidden="true">←</span>
-        <span>আগের পৃষ্ঠা</span>
+        <span>Previous Page</span>
       </button>
-      <button class="nav-btn nav-btn--next" id="btn-next" aria-label="পরের পৃষ্ঠা">
-        <span id="btn-next-text">পরের পৃষ্ঠা</span>
+      <button class="nav-btn nav-btn--next" id="btn-next" aria-label="Next Page">
+        <span id="btn-next-text">Next Page</span>
         <span class="nav-arrow" id="btn-next-icon" aria-hidden="true">→</span>
       </button>
     </nav>
 
     <!-- Close Book CTA (Prominent banner shown on page 12) -->
     <div class="close-cta" id="close-cta">
-      <button class="close-book-btn" id="btn-close-book" aria-label="বই বন্ধ করুন">
-        <span aria-hidden="true">📕</span> বই বন্ধ করুন
+      <button class="close-book-btn" id="btn-close-book" aria-label="Close the Book">
+        <span aria-hidden="true">📕</span> Close the Book
       </button>
     </div>
 
     <!-- Finale Replay CTA (Shown after book closes) -->
     <div class="finale-cta" id="finale-cta">
-      <button class="replay-btn" id="btn-replay" aria-label="শুরু থেকে আবার পড়ুন">
+      <button class="replay-btn" id="btn-replay" aria-label="Read Again from the Start">
         <span aria-hidden="true">🌹</span>
-        <span>শুরু থেকে আবার পড়ুন</span>
+        <span>Read Again from the Start</span>
         <span aria-hidden="true">✨</span>
       </button>
     </div>
@@ -183,13 +204,14 @@
     <!-- Keyboard & Touch Hints -->
     <footer class="app-footer">
       <p class="kbd-hints">
-        <kbd>→</kbd> / <kbd>Space</kbd> পরের পৃষ্ঠা &nbsp;•&nbsp;
-        <kbd>←</kbd> আগের পৃষ্ঠা &nbsp;•&nbsp;
-        <kbd>Enter</kbd> খোলা / বন্ধ &nbsp;•&nbsp;
-        <kbd>M</kbd> সুর
-        <span class="touch-hint"> &nbsp;•&nbsp; মুঠোফোনে পাশে টানুন</span>
+        <kbd>→</kbd> / <kbd>Space</kbd> Next Page &nbsp;•&nbsp;
+        <kbd>←</kbd> Previous Page &nbsp;•&nbsp;
+        <kbd>Enter</kbd> Open / Close &nbsp;•&nbsp;
+        <kbd>M</kbd> Music
+        <span class="touch-hint"> &nbsp;•&nbsp; Swipe on mobile</span>
       </p>
-      <p class="creator-credit">❤️ দিয়ে তৈরি করেছেন <a href="https://shaondev.me/" target="_blank" rel="noopener noreferrer">Md Shaon Sheikh</a></p>
+      <p class="creator-credit">Made with ❤️ by <a href="https://shaondev.me/" target="_blank"
+          rel="noopener noreferrer">Md Shaon Sheikh</a></p>
     </footer>
 
   </main>
@@ -200,24 +222,25 @@
       <div class="modal-header">
         <div class="modal-title-row">
           <span aria-hidden="true">💌</span>
-          <h2 id="modal-h2">Israt Jahan-এর জন্য সাজান</h2>
+          <h2 id="modal-h2">Customize for Sumi</h2>
         </div>
-        <button class="modal-close" id="modal-close" aria-label="বন্ধ করুন">✕</button>
+        <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
       </div>
       <div class="modal-body">
-        <p class="modal-intro">আপনার স্মৃতির বইয়ের কারণ ও ভালোবাসার কথা লিখুন। পরিবর্তন নিজে থেকেই সংরক্ষিত হবে!</p>
+        <p class="modal-intro">Write the reasons and love notes for your keepsake book. Changes are saved automatically!</p>
         <div class="reasons-edit-list" id="reasons-edit-list"></div>
         <div class="modal-action-row">
-          <button class="btn-add" id="btn-add-reason">＋ কারণ যোগ করুন</button>
-          <button class="btn-reset" id="btn-reset-reasons">শুরুর লেখায় ফিরুন</button>
+          <button class="btn-add" id="btn-add-reason">＋ Add a Reason</button>
+          <button class="btn-reset" id="btn-reset-reasons">Reset to Defaults</button>
         </div>
       </div>
       <div class="modal-footer">
-        <button class="btn-save" id="btn-save-reasons">সংরক্ষণ করে বই খুলুন ✨</button>
+          <button class="btn-save" id="btn-save-reasons">Save &amp; Open the Book ✨</button>
       </div>
     </div>
   </div>
 
   <script src="app.js"></script>
 </body>
+
 </html>

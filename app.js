@@ -1,6 +1,6 @@
 /**
- * 💕 Israt Jahan I Love You — 3D স্মৃতির বই
- * সম্পূর্ণ 3D অভিজ্ঞতা: বন্ধ বই ➔ খোলা পাতা ➔ ১২টি পৃষ্ঠা ➔ সমাপ্তি
+ * 💕 Sumi I Love You — 3D Keepsake Book
+ * Full 3D experience: Closed Book ➔ Open Pages ➔ 11 Pages ➔ Finale
  */
 (function () {
   'use strict';
@@ -8,102 +8,102 @@
   // ─── 1. Romantic Reasons Data ───────────────────────────────────────
   const DEFAULT_REASONS = [
     {
-      text: "কিছু গল্প হঠাৎ করেই শুরু হয়,\nকোনো পরিকল্পনা ছাড়াই…\n\nতোমাকে দেখার পর আমার গল্পটাও তেমনই শুরু হয়েছিল।",
-      secretNote: "সেদিনের সেই হঠাৎ শুরুটাই আজ আমার সবচেয়ে সুন্দর স্মৃতি।",
+      text: "The first day I saw you,\nI never imagined that one day\n\nyou would become someone so precious to me.",
+      secretNote: "That day, you were simply someone I knew. I never knew you would become such an important part of my story.",
       emoji: "📖", icon: "sparkle",
-      polaroidCaption: "একটি গল্পের শুরু",
-      quote: "কিছু গল্প পরিকল্পনা ছাড়াই সবচেয়ে সুন্দরভাবে শুরু হয়।",
-      chapter: "পৃষ্ঠা ১ ✦ শুরুটা",
+      polaroidCaption: "The Day I First Saw You",
+      quote: "Some people don't become special at first sight; time reveals their place in our hearts.",
+      chapter: "Page 1 ✦ The First Meeting",
       theme: "rose"
     },
     {
-      text: "জানি না কখন তুমি\nআমার ভালো লাগার কারণ হয়ে গেলে,\n\nশুধু জানি—তোমাকে দেখলেই মনটা ভালো হয়ে যায়।",
-      secretNote: "তোমাকে দেখলেই মন ভালো হয়ে যাওয়ার কারণটা আজও ঠিক বুঝে উঠতে পারিনি।",
-      emoji: "😊", icon: "heart",
-      polaroidCaption: "মন ভালো হয়ে যাওয়ার কারণ",
-      quote: "তোমাকে দেখলেই আমার মনটা ভালো হয়ে যায়।",
-      chapter: "পৃষ্ঠা ২ ✦ ভালো লাগা",
+      text: "Back then, you were my student,\nand I was simply your teacher…\n\nWho knew this simple connection would one day become something so special?",
+      secretNote: "At first, I only saw you as my student. I never knew our story had something more beautiful waiting for us.",
+      emoji: "🌸", icon: "heart",
+      polaroidCaption: "A Very Simple Beginning",
+      quote: "Some relationships begin simply, but slowly become something extraordinary.",
+      chapter: "Page 2 ✦ Our Introduction",
       theme: "blush"
     },
     {
-      text: "প্রথমে ছিল শুধু ভালো লাগা,\nতারপর তোমার কথা ভাবা…\n\nআর এখন, অজান্তেই তোমাকে খোঁজা।",
-      secretNote: "ভালো লাগা কখন যে তোমাকে খোঁজার অভ্যাসে বদলে গেল, তা টেরই পাইনি।",
-      emoji: "🔎", icon: "star",
-      polaroidCaption: "অজান্তেই তোমাকে খোঁজা",
-      quote: "তোমাকে ভাবতে ভাবতেই তুমি আমার অভ্যাস হয়ে গেছো।",
-      chapter: "পৃষ্ঠা ৩ ✦ একটু একটু করে",
+      text: "Then slowly, we started talking,\nI started knowing you,\n\nand without even realizing it, I began feeling closer to you.",
+      secretNote: "I don't know when talking to you became such an important part of my day.",
+      emoji: "💬", icon: "sparkle",
+      polaroidCaption: "From Conversations to Feelings",
+      quote: "Sometimes, conversations are what bring two hearts closer.",
+      chapter: "Page 3 ✦ Little by Little",
       theme: "navy"
     },
     {
-      text: "তোমার হাসিটা কেন জানি এত প্রিয়,\nতোমার কথাগুলো কেন জানি মনে থেকে যায়—\n\nহয়তো কারণটা তুমি।",
-      secretNote: "তোমার হাসি আর কথাগুলো আমার মনে আলাদা এক জায়গা করে নিয়েছে।",
-      emoji: "😄", icon: "sparkle",
-      polaroidCaption: "তোমার হাসি, তোমার কথা",
-      quote: "হয়তো কারণটা তুমি বলেই সবকিছু এত প্রিয়।",
-      chapter: "পৃষ্ঠা ৪ ✦ তুমি",
+      text: "I don't know exactly when,\nor how it happened,\n\nbut somehow, you became more than just someone I liked.",
+      secretNote: "I knew I liked you, but I never realized when those feelings became so deep and emotional.",
+      emoji: "❤️", icon: "heart",
+      polaroidCaption: "From Liking You to Loving You",
+      quote: "Love has no exact moment of arrival; it simply finds its way into the heart.",
+      chapter: "Page 4 ✦ The Beginning of My Feelings",
       theme: "peach"
     },
     {
-      text: "তোমাকে নিয়ে বড় কোনো স্বপ্ন চাই না,\nশুধু চাই—আমার ছোট ছোট স্বপ্নগুলোর\n\nএকটা অংশ যেন তুমি হও।",
-      secretNote: "আমার ছোট ছোট ইচ্ছেগুলোর পাশে তোমাকে কল্পনা করলেই ভবিষ্যৎটা সুন্দর লাগে।",
-      emoji: "🌱", icon: "leaf",
-      polaroidCaption: "ছোট স্বপ্নের এক অংশ",
-      quote: "আমার ছোট ছোট স্বপ্নের মাঝে তোমাকে চাই।",
-      chapter: "পৃষ্ঠা ৫ ✦ আমার অনুভূতি",
-      theme: "rose"
+      text: "I used to be someone\nwho didn't really let emotions control me…\n\nA little heartless, a little careless,\nalways keeping a distance from feelings.",
+      secretNote: "Even I didn't know there were so many emotions hidden inside me.",
+      emoji: "🖤", icon: "moon",
+      polaroidCaption: "The Person I Used to Be",
+      quote: "Sometimes, one person helps us discover a side of ourselves we never knew existed.",
+      chapter: "Page 5 ✦ The Old Me",
+      theme: "navy"
     },
     {
-      text: "অনেক কথা বলা হয়নি,\nঅনেক অনুভূতি লুকিয়ে রেখেছি…\n\nআজ আর লুকাতে চাই না।",
-      secretNote: "আজ আমার মনের কথাগুলো আর গোপন রাখতে চাই না।",
-      emoji: "💌", icon: "letter",
-      polaroidCaption: "মনের গোপন কথাগুলো",
-      quote: "আজ আর কোনো অনুভূতি লুকিয়ে রাখতে চাই না।",
-      chapter: "পৃষ্ঠা ৬ ✦ সত্যিটা",
+      text: "But after you came into my life,\nsomething inside me started changing…\n\nI began feeling emotions I had forgotten how to feel.",
+      secretNote: "You may not realize it, but you are one of the reasons I have changed so much.",
+      emoji: "🌷", icon: "leaf",
+      polaroidCaption: "You Changed Something in Me",
+      quote: "You didn't just come into my life; you slowly changed me from within.",
+      chapter: "Page 6 ✦ You Changed Me",
       theme: "lavender"
     },
     {
-      text: "তুমি যদি হও আকাশের চাঁদ,\nআমি হবো নীরব রাত—\n\nদূরে থেকেও তোমায় ভালোবেসে যাবো সারারাত।",
-      secretNote: "দূরত্ব যতই থাকুক, আমার ভালোবাসা তোমার কাছেই থেকে যাবে।",
-      emoji: "🌙", icon: "moon",
-      polaroidCaption: "চাঁদ আর নীরব রাত",
-      quote: "দূরে থেকেও তোমায় ভালোবেসে যাবো সারারাত।",
-      chapter: "পৃষ্ঠা ৭ ✦ ভালোবাসার ছন্দ",
+      text: "Now, somehow,\nyou occupy so much of my mind…\n\nIn the middle of the day,\nin the quiet of the night,\nI find myself thinking about you.",
+      secretNote: "Thinking about you is no longer just a habit. It feels like a natural part of every day.",
+      emoji: "🌙", icon: "star",
+      polaroidCaption: "You Are Always on My Mind",
+      quote: "So many of my thoughts somehow find their way back to you.",
+      chapter: "Page 7 ✦ Only You",
       theme: "navy"
     },
     {
-      text: "জীবনের পথে যদি\nআমার হাতটা তোমার হাতের পাশে থাকে,\n\nতোমার কি আপত্তি হবে?",
-      secretNote: "জীবনের পথটা তোমার পাশে পাশে হাঁটতে চাই।",
-      emoji: "🤝", icon: "heart",
-      polaroidCaption: "পাশাপাশি দুটো হাত",
-      quote: "তোমার হাতের পাশে আমার হাতটা রাখতে চাই।",
-      chapter: "পৃষ্ঠা ৮ ✦ একটা প্রশ্ন",
+      text: "Talking to you somehow\nmakes my heart feel peaceful,\n\nand even the smallest care from you\nmeans more to me than you know.",
+      secretNote: "There is something about your presence that I can never fully explain with words.",
+      emoji: "🥰", icon: "heart",
+      polaroidCaption: "Your Presence",
+      quote: "The moments I spend with you are some of the most peaceful moments of my life.",
+      chapter: "Page 8 ✦ You Are My Peace",
       theme: "blush"
     },
     {
-      text: "আমি তোমার জীবনে\nসবচেয়ে গুরুত্বপূর্ণ মানুষ হতে চাই না,\n\nশুধু এমন একজন হতে চাই—যাকে হারাতে তুমি ভয় পাবে।",
-      secretNote: "তোমার জীবনে আমার জায়গাটা খুব বড় না হলেও, খুব আপন হোক।",
-      emoji: "💞", icon: "heart",
-      polaroidCaption: "তোমার আপন একজন হতে চাই",
-      quote: "যাকে হারাতে তুমি ভয় পাবে, এমন একজন হতে চাই।",
-      chapter: "পৃষ্ঠা ৯ ✦ আমার চাওয়া",
+      text: "I don't know what the future\nhas written for us,\n\nbut I know one thing—\nwhen I imagine my future,\nit doesn't feel complete without you in it.",
+      secretNote: "Whenever I think about the future, the thought of having you beside me feels the most beautiful.",
+      emoji: "🌱", icon: "leaf",
+      polaroidCaption: "A Dream of Tomorrow",
+      quote: "I don't know what the future holds, I just know I want you to be part of it.",
+      chapter: "Page 9 ✦ Our Future",
       theme: "peach"
     },
     {
-      text: "তাহলে আজ একটা কথা বলি—\n\nতুমি কি আমার গল্পের\nসবচেয়ে সুন্দর অধ্যায়টা হবে?",
-      secretNote: "আমার গল্পের সবচেয়ে সুন্দর অধ্যায়টি তোমাকে নিয়েই লিখতে চাই।",
-      emoji: "💍", icon: "sparkle",
-      polaroidCaption: "সবচেয়ে সুন্দর অধ্যায়",
-      quote: "তুমি কি আমার গল্পের সবচেয়ে সুন্দর অধ্যায়টা হবে?",
-      chapter: "পৃষ্ঠা ১০ ✦ প্রস্তাব",
+      text: "So today,\nI don't want to hide my feelings anymore…\n\nI don't just love you,\nI want you to be a part of my life.",
+      secretNote: "I've kept these feelings inside for so long, and today I'm finally brave enough to tell you.",
+      emoji: "💌", icon: "letter",
+      polaroidCaption: "What My Heart Wants to Say",
+      quote: "Some feelings are meant to be spoken, no matter how long we keep them hidden.",
+      chapter: "Page 10 ✦ What I Feel",
       theme: "rose"
     },
     {
-      text: "আমি তোমাকে ভালোবাসি।\n\nতুমি কি আমার সাথে\nএই সুন্দর গল্পটা শুরু করবে? ❤️",
-      secretNote: "এটা শেষ নয়, বরং আমাদের সুন্দর গল্পের শুরু হতে পারে।",
+      text: "Sumi,\n\nwill you become\nthe most beautiful chapter of my life?\n\nCan I hold your hand\nand write the rest of this story with you? ❤️",
+      secretNote: "From that simple first meeting to everything we have become today, I have only one wish—that our story doesn't end here.",
       emoji: "❤️", icon: "heart",
-      polaroidCaption: "শেষ নয়, নতুন শুরু",
-      quote: "এই সুন্দর গল্পটা তোমার সাথে শুরু করতে চাই।",
-      chapter: "পৃষ্ঠা ১১ ✦ শেষ নয় ❤️",
+      polaroidCaption: "Not the End, But Our Beginning",
+      quote: "Will you start this beautiful story with me?",
+      chapter: "Page 11 ✦ My Question to You ❤️",
       theme: "rose"
     }
   ];
@@ -171,7 +171,7 @@
   function show(el) { if (el) el.classList.remove('hidden'); }
   function hide(el) { if (el) el.classList.add('hidden'); }
   function toBanglaNumber(value) {
-    return String(value).replace(/[0-9]/g, digit => '০১২৩৪৫৬৭৮৯'[digit]);
+    return String(value).replace(/[0-9]/g, digit => '0123456789'[digit]);
   }
   function esc(s = '') {
     return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -182,8 +182,8 @@
     const icon = SVGICONS[item.icon] || SVGICONS.heart;
     const isLast = (idx === reasons.length - 1);
     const hintContent = isLast
-      ? `<span>বই বন্ধ করুন</span> <kbd class="lf-hkbd">Space</kbd> 📕`
-      : `<span>পৃষ্ঠা উল্টান</span> <kbd class="lf-hkbd">Space</kbd> →`;
+      ? `<span>Close Book</span> <kbd class="lf-hkbd">Space</kbd> 📕`
+      : `<span>Turn Page</span> <kbd class="lf-hkbd">Space</kbd> →`;
 
     return `
       <div class="lf-foil" aria-hidden="true"></div>
@@ -191,7 +191,7 @@
       <div class="lf-shimmer" aria-hidden="true"></div>
       <div class="lf-badge">
         <span class="lf-star" aria-hidden="true">✦</span>
-        <span class="lf-number">কারণ #${toBanglaNumber(idx + 1)}</span>
+        <span class="lf-number">Reason #${idx + 1}</span>
         <span class="lf-star" aria-hidden="true">✦</span>
       </div>
       <div class="lf-quote">
@@ -214,16 +214,16 @@
       <div class="lf-shimmer" aria-hidden="true"></div>
       <div class="lf-badge">
         <span class="lf-star" aria-hidden="true">✦</span>
-        <span class="lf-number">গোপন চিঠি #${toBanglaNumber(idx + 1)}</span>
+        <span class="lf-number">Secret Note #${idx + 1}</span>
         <span class="lf-star" aria-hidden="true">✦</span>
       </div>
       <div class="lf-secret">
-        <span class="lf-secret-label">তোমার জন্য ভালোবাসার চিঠি</span>
-        <p class="lf-secret-text">${esc(item.secretNote || 'কথায় প্রকাশের চেয়েও বেশি I Love You।')}</p>
+        <span class="lf-secret-label">A Letter Written Just for You</span>
+        <p class="lf-secret-text">${esc(item.secretNote || 'Some feelings are beyond words. I love you.')}</p>
         <span class="lf-secret-emoji" aria-hidden="true">❤️</span>
       </div>
       <div class="lf-footer">
-        <div class="lf-hint">← ফিরে যান অথবা চাপুন <kbd class="lf-hkbd">←</kbd></div>
+        <div class="lf-hint">← Go back or press <kbd class="lf-hkbd">←</kbd></div>
       </div>`;
   }
 
@@ -238,7 +238,7 @@
       leaf.id = `leaf-${idx}`;
       leaf.setAttribute('role', 'button');
       leaf.setAttribute('tabindex', idx === 0 ? '0' : '-1');
-      leaf.setAttribute('aria-label', `পৃষ্ঠা ${toBanglaNumber(idx + 1)}: ${item.text}`);
+      leaf.setAttribute('aria-label', `Page ${idx + 1}: ${item.text}`);
       leaf.style.zIndex = total - idx;
 
       leaf.innerHTML = `
@@ -258,9 +258,9 @@
   // ─── 6. Left Page Updates ───────────────────────────────────────────
   function updateLeftPage(idx) {
     const item = reasons[idx] || reasons[0];
-    polaroidCaption.textContent = item.polaroidCaption || 'A quiet moment';
-    handwrittenNote.textContent = `"${item.quote || 'এই পৃথিবীতে তোমার মতো আপন হৃদয় আর কারও নেই।'}"`;
-    chapterLabel.textContent = item.chapter || `অধ্যায় ${toBanglaNumber(idx + 1)}`;
+    polaroidCaption.textContent = item.polaroidCaption || 'A Quiet Moment';
+    handwrittenNote.textContent = `"${item.quote || 'In this whole world, there is no heart as dear to me as yours.'}"`;
+    chapterLabel.textContent = item.chapter || `Chapter ${idx + 1}`;
 
     if (openBookEl) openBookEl.setAttribute('data-theme', item.theme || 'rose');
 
@@ -281,24 +281,24 @@
     progressFill.style.width = `${pct}%`;
     progressTrack.setAttribute('aria-valuenow', currentPage + 1);
     progressTrack.setAttribute('aria-valuemax', total);
-    pageCurrent.textContent = toBanglaNumber(currentPage + 1);
-    pageTotal.textContent = toBanglaNumber(total);
+    pageCurrent.textContent = currentPage + 1;
+    pageTotal.textContent = total;
   }
 
   function updateNavButtons() {
     const total = reasons.length;
     btnPrev.disabled = (currentPage === 0);
 
-    // শেষ পাতায় পরের বোতামটি বই বন্ধ করার বোতামে বদলে যায়।
+    // On the last page, the Next button becomes the Close Book button.
     if (currentPage >= total - 1) {
       btnNext.disabled = false;
-      btnNextText.textContent = 'বই বন্ধ করুন';
+      btnNextText.textContent = 'Close the Book';
       btnNextIcon.textContent = '📕';
       btnNext.classList.add('nav-btn--close');
       show(closeCta);
     } else {
       btnNext.disabled = false;
-      btnNextText.textContent = 'পরের পৃষ্ঠা';
+      btnNextText.textContent = 'Next Page';
       btnNextIcon.textContent = '→';
       btnNext.classList.remove('nav-btn--close');
       hide(closeCta);
@@ -532,12 +532,12 @@
     if (soundEnabled) {
       btnSound.setAttribute('aria-pressed', 'true');
       iconMuted.classList.add('hide'); iconSound.classList.remove('hide');
-      soundLabel.textContent = 'সুর: চালু';
+      soundLabel.textContent = 'Music: On';
       startMelody();
     } else {
       btnSound.setAttribute('aria-pressed', 'false');
       iconMuted.classList.remove('hide'); iconSound.classList.add('hide');
-      soundLabel.textContent = 'সুর: বন্ধ';
+      soundLabel.textContent = 'Music: Off';
       stopMelody();
     }
     localStorage.setItem('ril_sound', soundEnabled ? 'true' : 'false');
@@ -750,13 +750,13 @@
     reasonsEditList.innerHTML = '';
     reasons.forEach((r, i) => {
       const div = document.createElement('div'); div.className = 'reason-edit-item';
-      div.innerHTML = `<span class="reason-edit-num">#${toBanglaNumber(i + 1)}</span><textarea class="reason-edit-input" data-i="${i}" aria-label="কারণ ${toBanglaNumber(i + 1)}">${esc(r.text)}</textarea><button class="reason-del-btn" data-i="${i}" aria-label="কারণ ${toBanglaNumber(i + 1)} মুছে দিন">✕</button>`;
+      div.innerHTML = `<span class="reason-edit-num">#${i + 1}</span><textarea class="reason-edit-input" data-i="${i}" aria-label="Reason ${i + 1}">${esc(r.text)}</textarea><button class="reason-del-btn" data-i="${i}" aria-label="Delete reason ${i + 1}">✕</button>`;
       reasonsEditList.appendChild(div);
     });
     reasonsEditList.querySelectorAll('.reason-del-btn').forEach(btn => {
       btn.addEventListener('click', e => {
         const idx = +e.currentTarget.getAttribute('data-i');
-        if (reasons.length <= 1) { alert('অন্তত ১টি কারণ রাখতে হবে!'); return; }
+        if (reasons.length <= 1) { alert('At least 1 reason is required!'); return; }
         reasons.splice(idx, 1);
         renderEditList();
       });
@@ -772,8 +772,8 @@
     });
     reasons = updated;
     localStorage.setItem('ril_story_pages_v1', JSON.stringify(reasons));
-    if (cbCount) cbCount.textContent = `${toBanglaNumber(reasons.length)}টি অধ্যায়`;
-    pageTotal.textContent = toBanglaNumber(reasons.length);
+    if (cbCount) cbCount.textContent = `${reasons.length} Chapters`;
+    pageTotal.textContent = reasons.length;
     closeModal();
     createLeaves();
     if (bookState === 'reading') {
@@ -852,13 +852,13 @@
     custModal.addEventListener('click', e => { if (e.target === custModal) closeModal(); });
 
     btnAddReason.addEventListener('click', () => {
-      reasons.push({ ...DEFAULT_REASONS[reasons.length % DEFAULT_REASONS.length], text: 'তুমি যেভাবে আমার জীবনে নির্মল আলো নিয়ে আসো।' });
+      reasons.push({ ...DEFAULT_REASONS[reasons.length % DEFAULT_REASONS.length], text: 'Sumi, you bring a beautiful light into my life that I cannot explain.' });
       renderEditList();
       reasonsEditList.scrollTop = reasonsEditList.scrollHeight;
     });
 
     btnReset.addEventListener('click', () => {
-      if (confirm('সব কারণ শুরুর লেখায় ফিরিয়ে নিতে চান?')) {
+      if (confirm('Reset all reasons to the original defaults?')) {
         reasons = JSON.parse(JSON.stringify(DEFAULT_REASONS));
         renderEditList();
       }
@@ -870,8 +870,8 @@
 
   // ─── 16. Initialization ─────────────────────────────────────────────
   function init() {
-    if (cbCount) cbCount.textContent = `${toBanglaNumber(reasons.length)}টি অধ্যায়`;
-    pageTotal.textContent = toBanglaNumber(reasons.length);
+    if (cbCount) cbCount.textContent = `${reasons.length} Chapters`;
+    pageTotal.textContent = reasons.length;
 
     // Default intro state
     hide(openBookEl);
